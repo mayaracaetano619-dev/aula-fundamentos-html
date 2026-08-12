@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mayara | Sobre mim</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+           BODY
+        ========================= */
+
+        body {
+            min-height: 100vh;
+
+            font-family: "Lobster Two", cursive;
+
+            background: linear-gradient(
+                135deg,
+                #8e8df0,
+                #b9b8ff,
+                #d9d8ff
+            );
+
+            color: #29294a;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+
+        /* =========================
+           CARD PRINCIPAL
+        ========================= */
+
+        .bio {
+            width: 100%;
+            max-width: 650px;
+
+            background-color: rgba(255, 255, 255, 0.92);
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px rgba(45, 45, 100, 0.25);
+
+            backdrop-filter: blur(10px);
+
+            animation: aparecer 0.8s ease;
+        }
+
+
+        /* Animação de entrada */
+
+        @keyframes aparecer {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           FOTO
+        ========================= */
+
+        .foto {
+            width: 180px;
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 6px solid #ffffff;
+
+            box-shadow:
+                0 8px 25px rgba(50, 50, 100, 0.25);
+
+            margin-bottom: 20px;
+
+            transition: 0.3s;
+        }
+
+        .foto:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           TÍTULO
+        ========================= */
+
+        h1 {
+            font-size: 42px;
+
+            color: #5654a8;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           TEXTO
+        ========================= */
+
+        .descricao {
+            font-family: Arial, sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+
+            color: #555;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           TÍTULOS DAS SEÇÕES
+        ========================= */
+
+        h2 {
+            font-size: 28px;
+
+            color: #6563c4;
+
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           ESPECIALIDADES
+        ========================= */
+
+        .especialidades {
+            list-style: none;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 30px;
+        }
+
+        .especialidades li a {
+
+            display: block;
+
+            padding: 12px;
+
+            border-radius: 12px;
+
+            background-color: #eeeeff;
+
+            color: #5554a5;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+        .especialidades li a:hover {
+
+            background-color: #6563c4;
+
+            color: white;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 5px 15px rgba(80, 80, 180, 0.25);
+        }
+
+
+        /* =========================
+           HOBBIES
+        ========================= */
+
+        .hobbies {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            list-style: none;
+
+            margin-bottom: 30px;
+        }
+
+        .hobbies li {
+
+            background-color: #f0efff;
+
+            padding: 10px 18px;
+
+            border-radius: 30px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            color: #5554a5;
+
+            transition: 0.3s;
+        }
+
+        .hobbies li:hover {
+
+            transform: translateY(-3px);
+
+            background-color: #dedcff;
+        }
+
+
+        /* =========================
+           REDES SOCIAIS
+        ========================= */
+
+        .redes {
+
+            border-top: 1px solid #ddd;
+
+            padding-top: 25px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+        }
+
+        .redes a {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+
+            background-color: #eeeeff;
+
+            transition: 0.3s;
+        }
+
+        .redes a:hover {
+
+            transform: translateY(-5px);
+
+            background-color: #6563c4;
+        }
+
+        .logos {
+
+            width: 30px;
+            height: 30px;
+
+            object-fit: contain;
+
+            border-radius: 0;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+
+            margin-top: 25px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            color: #888;
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .bio {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            .foto {
+                width: 150px;
+                height: 150px;
+            }
+
+            .especialidades {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="bio">
+
+        <!-- FOTO -->
+
+        <img
+            class="foto"
+            src="foto.png.jpeg"
+            alt="Foto de Mayara"
+        >
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <h1>Olá, sou a Mayara! 💜</h1>
+
+        <p class="descricao">
+            Tenho 16 anos e sou estudante de Desenvolvimento de Sistemas.
+            Gosto de aprender coisas novas, explorar diferentes áreas
+            e transformar minhas ideias em projetos.
+        </p>
+
+
+        <!-- ESPECIALIDADES -->
+
+        <h2>✨ Minhas Especialidades</h2>
+
+        <ul class="especialidades">
+
+            <li>
+                <a
+                    href="https://www.youtube.com/watch?v=3GUV7LFwzLs&list=PLhLCtESG30TErjovQQiqPO0TgNym1eS3l"
+                    target="_blank"
+                >
+                    🍳 Cozinhar
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/watch?v=Z2IDF9I9JZ8&list=PLN1HSUQTkB_avvna9skkXcDgWrwPC9kZ_"
+                    target="_blank"
+                >
+                    🔎 Casos Criminais
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/watch?v=kwW6MI3i0f4&list=PLY0bKeQBpl-etdcx7zWsVOEV-2Lc0bibq"
+                    target="_blank"
+                >
+                    💇 Cabelo
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/watch?v=nTnp56ZtIgE&list=PLAPlP4_tZ6394ykFyrjjYrMCnbE5NliTI"
+                    target="_blank"
+                >
+                    📸 Fotografia
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://www.youtube.com/watch?v=fXI1HBXX8v8&list=PLZaN7QJt-3DM"
+                    target="_blank"
+                >
+                    ✝️ Catolicismo
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- HOBBIES -->
+
+        <h2>💜 Meus Hobbies</h2>
+
+        <ul class="hobbies">
+
+            <li>📚 Leitura</li>
+
+            <li>🍳 Cozinhar</li>
+
+            <li>🎬 Assistir filmes e séries</li>
+
+            <li>🎵 Escutar músicas</li>
+
+        </ul>
+
+
+        <!-- REDES SOCIAIS -->
+
+        <div class="redes">
+
+            <a
+                href="https://github.com/mayaracaetano619-dev"
+                target="_blank"
+                aria-label="GitHub"
+            >
+
+                <img
+                    class="logos"
+                    src="github.png"
+                    alt="GitHub"
+                >
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/mayara-caetano-051359417/"
+                target="_blank"
+                aria-label="LinkedIn"
+            >
+
+                <img
+                    class="logos"
+                    src="linkedin.png"
+                    alt="LinkedIn"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+            Desenvolvido por Mayara 💜
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
